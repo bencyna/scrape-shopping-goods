@@ -1,1 +1,11 @@
-user_choice = input("You will be able to, add an item to be searched, search all the items and retreive an email")
+from rental_listings import RentalListings
+from csv_generator import CSVGenerator
+import time
+
+init = RentalListings()
+details = init.get_links()
+print(details)
+time.sleep(3)
+
+csv = CSVGenerator(details)
+csv.fill_in_form()
